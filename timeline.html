@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="timeline.css">
+    <title></title>
+</head>
+
+<body>
+    <section class="about-timeline">
+        <div class="wrapper inner-wrapper-padding ">
+            <div class="start-point">
+                <div class="black-dot"></div>
+                <h4>Start</h4>
+                <div class="corner bl"></div>
+            </div>
+            <div class="timeline-main" id="timeLineBlock">
+             </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('data.json')
+            .then(function (response) {
+                // handle success
+                console.log(response.data.data);
+                var finalData = response.data.data;
+                var firstBlockData = '<div class="timeline-row" id="firstblock">';
+                var secondBlockData = '<div class="timeline-row" id="secondblock">';
+                var thirdBlockData = '<div class="timeline-row" id="thirdblock">';
+                var flag=false,count=0;
+                for(let i=0;i<finalData.length;i++)
+                {
+                    if(i==0)
+                    {
+                        console.log("if block working",i);
+                     firstBlockData += `<div class="timeline-box timeline-content-img logo-timeline-arrow">
+                        <div class="timeline-box-wrap">
+                            <h6>${finalData[i].year}</h6>
+                            <div class="timeline-content">
+                                <div class="timeline-content-txt">
+                                    <p><span style="color:orange">National Science Day<br/></span>
+                                        is celebrated all over India<br/>
+                                        with great enthusiasm on<br/>
+                                         <span style="color:red">28<sup>th</sup> of February</span><br/>
+                                         every year in order to commemorate <br/>the invention of the <b>Raman Effect</b>.
+                                        </p>    
+                                </div>
+                                <img src="./images/img1.jpg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>`
+                    document.getElementById('timeLineBlock').innerHTML = firstBlockData;
+                    console.log(document.getElementById('timeLineBlock'));
+                    }
+                   else if(i==1)
+                    {
+                        firstBlockData += `<div class="timeline-box timeline-content-img logo-timeline-arrow">
+                        <div class="timeline-box-wrap">
+                            <h6>1930</h6>
+                            <div class="timeline-content">
+                                <div class="timeline-content-txt">
+                                    <p><span style="color:green">sir Chandrasekhara Venkata Raman<br/></span>
+                                        For his great success <br/>in the field of science in india,<br/>
+                                        Raman was awarded and honoured <br/>with <b>Nobel Prize</b>.
+                                        </p>    
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="horizontal-line"></div>
+                        <div class="verticle-line"></div>
+                        <div class="corner top"></div>
+                        <div class="corner bottom"></div>
+                        </div>`
+                        // firstBlockData += ``    
+                        document.getElementById('timeLineBlock').innerHTML = firstBlockData; 
+                    }
+                    else if(flag==false)
+                    {
+                      console.log("else if block working",i);
+                      secondBlockData += `<div class="timeline-box img-right timeline-content-img">
+                        <div class="timeline-box-wrap">
+                            <h6>${finalData[i].year}</h6>
+                            <div class="timeline-content">
+                                <div class="timeline-content-txt">
+                                    <p>${finalData[i].desc}</p>
+                                </div>
+                                <img src="${finalData[i].image}"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>`
+                    if(count==2 || finalData.length-1 == i)
+                      {
+                        count=0;
+                        flag = true;
+                        secondBlockData += `<div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                    `
+                    if(finalData.length-1 == i) 
+                       {
+                        secondBlockData += `<div class="start-point end-point">
+                        <h4>Continue</h4>
+                        </div></div>`
+                      }
+                    document.getElementById('timeLineBlock').innerHTML += secondBlockData;
+                     secondBlockData = '<div class="timeline-row" id="secondblock">';
+                      }
+                      else
+                      {
+                        count++
+                      }
+                    }
+                    else{
+                        console.log("else block working",i);
+                        thirdBlockData += `<div class="timeline-box img-left timeline-content-img">
+                        <div class="timeline-box-wrap">
+                            <h6>${finalData[i].year}</h6>
+                            <div class="timeline-content">
+                                <div class="timeline-content-txt">
+                                    <p>${finalData[i].desc}</p>
+                                </div>
+                                <img src="${finalData[i].image}"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>`
+                        if(count==2 || finalData.length-1 == i)
+                      {
+                        count=0;
+                        flag = false;
+                        thirdBlockData += ` <div class="horizontal-line"></div>
+                    <div class="verticle-line"></div>
+                    <div class="corner top"></div>
+                    <div class="corner bottom"></div>
+                    `   
+                       if(finalData.length-1 == i) 
+                       {
+                        thirdBlockData += `<div class="start-point end-point">
+                        <h4>Continue</h4>
+                        </div></div>`
+                       }
+                       document.getElementById('timeLineBlock').innerHTML += thirdBlockData;
+                       var thirdBlockData = '<div class="timeline-row" id="thirdblock">';
+                      }
+                      else
+                      {
+                        count++
+                      }
+                    }
+                }
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+{
+    "data":[
+        {
+            "id":1,
+            "year":"1998",
+            "desc":"Our Changing Earth",
+            "image":"./images/img2009.png"
+        },
+        {
+            "id":2,
+            "year":"1930",
+            "desc":"Laoreet nisl. Metus A.<br> Fringilla Donec taciti et euismod malesuada.",
+            "image":"./images/img2.jpg"
+        },
+        {
+            "id":3,
+            "year":"1999",
+            "desc":"“Our Changing Earth”",
+            "image":"./images/imgone1999.webp"
+        },
+        {
+            "id":4,
+            "year":"2000",
+            "desc":"“Recreating Interest in Basic Science”",
+            "image":"./images/img2000.png"
+        },
+        {
+            "id":5,
+            "year":"2001",
+            "desc":"“Information Technology for Science Education”",
+            "image":"./images/img2001.jpg"
+        },
+        {
+            "id":6,
+            "year":"2002",
+            "desc":"“Wealth From Waste”",
+            "image":"./images/img2002.png"
+        },
+        {
+            "id":7,
+            "year":"2003",
+            "desc":"“50 years of DNA & 25 years of IVF – The Blue print of Life”",
+            "image":"./images/img2003.png"
+        },
+        {
+            "id":8,
+            "year":"2004",
+            "desc":"“Encouraging Scientific Awareness in Community”",
+            "image":"./images/img2004.png"
+        },
+        {
+            "id":9,
+            "year":"2005",
+            "desc":"“Celebrating Physics”",
+            "image":"./images/img2005.png"
+        },
+        {
+            "id":10,
+            "year":"2006",
+            "desc":"“Nurture Nature for our future”",
+            "image":"./images/img2006.png"
+        },
+        {
+            "id":11,
+            "year":"2007",
+            "desc":"“More Crop Per Drop”",
+            "image":"./images/img2007.png"
+        },
+        {
+            "id":12,
+            "year":"2008",
+            "desc":"“Understanding the Planet Earth”",
+            "image":"./images/imgone2008.png"
+        },
+        {
+            "id":13,
+            "year":"2009",
+            "desc":"“Expanding Horizons of Science”",
+            "image":"./images/img2009.png"
+        },
+        {
+            "id":14,
+            "year":"2010",
+            "desc":"“Gender Equity, Science & Technology for Sustainable Development”",
+            "image":"./images/img2010.png"
+        },
+        {
+            "id":15,
+            "year":"2011",
+            "desc":"“Chemistry in Daily Life”",
+            "image":"./images/img2011.png"
+        },
+        {
+            "id":16,
+            "year":"2012",
+            "desc":"“Clean Energy Options and Nuclear Safety”",
+            "image":"./images/img2012.jpg"
+        },
+        {
+            "id":17,
+            "year":"2013",
+            "desc":"“Genetically Modified Crops and Food Security”",
+            "image":"./images/img2013.png"
+        },
+        {
+            "id":18,
+            "year":"2014",
+            "desc":"“Fostering Scientific Temper”",
+            "image":"./images/img2014.png"
+        },
+        {
+            "id":19,
+            "year":"2015",
+            "desc":"“Science for Nation Building”",
+            "image":"./images/img2015.png"
+        },
+        {
+            "id":20,
+            "year":"2016",
+            "desc":"“Scientific Issues for Development of the Nation”",
+            "image":"./images/img2016.png"
+        },
+        {
+            "id":21,
+            "year":"2017",
+            "desc":"“Science and Technology for Specially Abled Persons”",
+            "image":"./images/img2018.jpeg"
+        },
+        {
+            "id":22,
+            "year":"2019",
+            "desc":"“Science and Technology for a sustainable future”",
+            "image":"./images/img2019.webp"
+        },
+        {
+            "id":23,
+            "year":"2020",
+            "desc":"“Science for the People, and the People for Science”",
+            "image":"./images/img2020.jpg"
+        },
+        {
+            "id":24,
+            "year":"2021",
+            "desc":"“Women in Science”",
+            "image":"./images/img2021.jpeg"
+        },
+        {
+            "id":25,
+            "year":"2022",
+            "desc":"“Future Science”",
+            "image":"./images/img2022.jpg"
+        }
+    ]
+}
